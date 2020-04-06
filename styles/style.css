@@ -1,5 +1,5 @@
 body {
-    background-color: grey;
+    background-color: #f55b49;
     font-family: 'Sen', sans-serif;
 }
 
@@ -58,7 +58,6 @@ h1 {
 .adjustContainer {
     height: 55px;
     width: 250px;
-    background-color: grey;
     display: inline-grid;
     grid-template-columns: 55px auto 55px;
     padding: 5px 5px 5px 5px

@@ -21,14 +21,14 @@
       <div class="adjustText" style="margin-right: 45px; float: right;">Break Time</div>
     </div>
     <div class="adjustContainer adjustLeft">
-      <img src="images/down.png" alt="Arrow down" class="iconDown">
-      <div class=adjustNumber>25:00</div>
-      <img src="images/up.png" alt="Arrow up" class="iconUp">
+      <img src="images/down.png" alt="Arrow down" class="iconDown" onclick="adjustWorkTime(0)">
+      <div class=adjustNumber id="workNumber">25</div>
+      <img src="images/up.png" alt="Arrow up" class="iconUp" onclick="adjustWorkTime(1)">
     </div>
     <div class="adjustContainer adjustRight">
-      <img src="images/down.png" alt="Arrow down" class="iconDown">
-      <div class=adjustNumber>5:00</div>
-      <img src="images/up.png" alt="Arrow up" class="iconUp">
+      <img src="images/down.png" alt="Arrow down" class="iconDown" onclick="adjustBreakTime(0)">
+      <div class=adjustNumber id="breakNumber">5</div>
+      <img src="images/up.png" alt="Arrow up" class="iconUp" onclick="adjustBreakTime(1)">
     </div>
 
     <div id="clock">
