@@ -2,16 +2,44 @@
 <html>
 
 <head>
+
   <meta charset="utf-8">
-  <title></title>
+  <title>Pomodoro</title>
   <meta name="author" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link href="styles/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+  <h1>Change accodring to worktime, break etc</h1>
+  <div id="container">
+    <div id="header">
+      <div class="adjustText" style="margin-left: 50px;">Work Time</div>
+      <div class="adjustText" style="margin-right: 45px; float: right;">Break Time</div>
+    </div>
+    <div class="adjustContainer adjustLeft">
+      <img src="images/down.png" alt="Arrow down" class="iconDown">
+      <div class=adjustNumber>25:00</div>
+      <img src="images/up.png" alt="Arrow up" class="iconUp">
+    </div>
+    <div class="adjustContainer adjustRight">
+      <img src="images/down.png" alt="Arrow down" class="iconDown">
+      <div class=adjustNumber>5:00</div>
+      <img src="images/up.png" alt="Arrow up" class="iconUp">
+    </div>
+
+    <div id="clock">
+      25:00
+    </div>
+    <div id="controls">
+      <img src="images/play.png" alt="Start" id="playBtn">
+      <img src="images/pause.png" alt="Pause" id="pauseBtn">
+      <img src="images/stop.png" alt="Stop" id="stopBtn">
+    </div>
+  </div>
 
   <script src="scripts/script.js"></script>
 </body>
