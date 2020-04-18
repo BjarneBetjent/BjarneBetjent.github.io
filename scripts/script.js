@@ -3,6 +3,8 @@ var workTime = 25, breakTime = 5;
 var timeMinutes, timeSeconds;
 var paused = false, stopped = true, work = true;
 var countdownInterval;
+var breakStart = new Audio("sounds/break.mp3");
+var workStart = new Audio("sounds/work.mp3");
 
 /**
  * 
@@ -44,6 +46,7 @@ function adjustBreakTime (indicator)
  */
 function start ()
 {
+    if(!paused && !stopped) return;
     if(work) document.getElementById("headline").innerHTML = "Work";
     else document.getElementById("headline").innerHTML = "Break";
     stopped = false;
@@ -99,6 +102,7 @@ function calculateCountdownTime ()
         if(work)
         {
             work = false;
+            breakStart.play();
             if(breakTime < 10) breaktime = "0" + breakTime;
             document.getElementById("clock").innerHTML = breakTime + ":00";
             document.getElementById("headline").innerHTML = "Break";
@@ -106,6 +110,7 @@ function calculateCountdownTime ()
         else
         {
             work = true;
+            workStart.play();
             if(workTime < 10) workTime = "0" + workTime;
             document.getElementById("clock").innerHTML = workTime + ":00";
             document.getElementById("headline").innerHTML = "Work";
